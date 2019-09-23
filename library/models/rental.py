@@ -3,7 +3,7 @@ from odoo import fields, models
 
 class Rentals(models.Model):
     _name = 'library.rental'
-    _description = 'Book rental'
+    _description = 'Book rentals'
 
     customer_id = fields.Many2one('library.partner', 'Customer')
     book_id = fields.Many2one('library.book', 'Book')

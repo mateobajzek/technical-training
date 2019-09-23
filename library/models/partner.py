@@ -8,6 +8,7 @@ class Partner(models.Model):
     name = fields.Char()
     email = fields.Char()
     address = fields.Char()
-    partner_type = fields.Selection ([('customer', 'Customer'), ('author', 'Author')], 
-
-    rental_ids = fields.One2many('library.rental', 'customer_id','Rentals')
+    
+    partner_type = fields.Selection ([('customer', 'Customer'), ('author', 'Author')]) 
+	
+	rental_ids = fields.One2many('library.rental', 'customer_id','Rentals')

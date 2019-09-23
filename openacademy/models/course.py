@@ -51,11 +51,10 @@ class Session(models.Model):
             rec.number_attendees = len(rec.attendee_ids)
 
 
-    # @api.onchange('attende_ids','capacity')
-    # def ohchange_check_num_capacity(self):
-    #    if self.capacity <number_attendees:
-    #       self.attende_ids = self.attende_ids[:self.capacity]
-    #       raise Warning('Too much atendees for room capacity!')
+    @api.onchange('attende_ids','capacity')
+    def ohchange_check_num_capacity(self):
+        if self.capacity <number_attendees:
+           return {"warning":'Too much atendees for room capacity!'}
 
     
  

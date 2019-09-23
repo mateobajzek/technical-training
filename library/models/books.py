@@ -1,12 +1,12 @@
 from odoo import models,fields,api
 
 class Books(models.Model):
-	_name = 'library.book'
-	_description = 'Book'
+    _name = 'library.book'
+    _description = 'Book'
 
-	name = fields.Char('Title')
+    name = fields.Char('Title')
 
-	author_ids = fields.Many2many("library.partner", "Authors")
+    author_ids = fields.Many2many("library.partner", "Authors")
    
     year_of_edition = fields.Date()
    

@@ -39,21 +39,24 @@ class Session(models.Model):
         ('check_num_capacity','CHECK(capacity>= number_attendees)','Too much ateeendes for room capacity! SQL')
     ]
 
+    @api.constrains('attende_ids','capacity')
+    def check_num_capacity(self):
+        for rec in self:
+            if rec.capacity < rec.number_attendes:
+                raise Warning('Too much attendees for room capacity!')
+
     @api.depends('attendee_ids')
     def get_number_attendees(self):
         for rec in self:
             rec.number_attendees = len(rec.attende_ids)
 
 
-    @api.onchange('attende_ids','capacity')
-    def ohchange_check_num_capacity(self):
-        if self.capacity <number_attendees:
-            self.attende_ids = self.attende_ids[:self.capacity]
-            raise Warning('Too much atendees for room capacity!')
-    @api.constraints('attende_ids','capacity')
-    def check_num_capacity(self):
-        for rec in self:
-            if rec.capacity < rec.number_attendes:
-                raise Warning('Too much attendees for room capacity!')
+    # @api.onchange('attende_ids','capacity')
+    # def ohchange_check_num_capacity(self):
+    #    if self.capacity <number_attendees:
+    #       self.attende_ids = self.attende_ids[:self.capacity]
+    #       raise Warning('Too much atendees for room capacity!')
+
+    
  
-            raise Warning('Too much atendees for room capacity!')
+      

@@ -10,5 +10,5 @@ class Partner(models.Model):
     address = fields.Char()
     
     partner_type = fields.Selection ([('customer', 'Customer'), ('author', 'Author')]) 
-    
-    rental_ids = fields.One2many('library.rental', 'customer_id','Rentals')
+
+    rental_ids = fields.One2many('library.rental', 'customer_id',string='Rentals')

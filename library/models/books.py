@@ -6,7 +6,7 @@ class Books(models.Model):
 
     name = fields.Char('Title')
 
-    author_ids = fields.Many2many("library.partner", "Authors")
+    author_ids = fields.Many2many("library.partner", string="Authors")
    
     year_of_edition = fields.Date()
    

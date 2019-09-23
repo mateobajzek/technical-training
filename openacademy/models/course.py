@@ -13,7 +13,7 @@ class Course(models.Model):
 
     responsible_id = fields.Many2one('openacademy.person')
 
-    sessuion_ids = fields.One2many('openacademy.session', '0couese_id')
+    sessions_ids = fields.One2many('openacademy.session', 'course_id')
 
 
 

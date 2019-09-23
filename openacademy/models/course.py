@@ -34,7 +34,7 @@ class Session(models.Model):
     capacity = fields.Integer()
     number_attandees = fields.Integer(compute="get_number_attendees", store=True)
 
-    _sql.constraints = 
+    _sql.constrains = 
     [('check_num_capacity','capacity>= number_attendees','Too much ateeendes for room capacity!','SQL')]
 
     @api.depends('attendee_ids')

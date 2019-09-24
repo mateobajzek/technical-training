@@ -23,10 +23,8 @@
 					<h1>
 						<field name="name"/>
 					</h1>
-					<group string="responsible group">
+					<group string="responsible_group" string="responsible_group">
 						<field name="responsible_id"/>
-						<field name="hours_to_study_per_day" widget="float_time"/>
-						<field name="completion" widget="progresbar"/>
 					</group>
 					<notebook>
 						<page name="page_description" string="Description">

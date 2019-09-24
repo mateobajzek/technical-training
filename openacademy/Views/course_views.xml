@@ -23,7 +23,7 @@
 					<h1>
 						<field name="name"/>
 					</h1>
-					<group string="responsible_group" string="responsible_group">
+					<group name="responsible_group" string="responsible_group">
 						<field name="responsible_id"/>
 					</group>
 					<notebook>

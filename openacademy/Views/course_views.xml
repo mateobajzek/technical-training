@@ -75,7 +75,7 @@
 					</group>	
 					<notebook>
 						<page name="page_attendees" string="Attendees">
-							<field name="attendee_ids"/>
+							<field name="attendee_ids">
 								<tree editable="bottom">
 									<field name="name"/>
 									<field name="instructor"/>

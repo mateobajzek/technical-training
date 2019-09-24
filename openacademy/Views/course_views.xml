@@ -29,7 +29,7 @@
 						<field name="completion" widget="progresbar"/>
 					</group>
 					<notebook>
-						<page name="page_description"string="Description">
+						<page name="page_description" string="Description">
 							<field name="description"/>	
 						</page>	
 						<page name="page_sessions" string="Session">

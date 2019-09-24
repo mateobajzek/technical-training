@@ -53,7 +53,7 @@
 
 <record id="session_form_view" model="ir.ui.view">
 		<field name="name">session.form.view</field>
-		<field name="model">openacademy.course</field>
+		<field name="model">openacademy.session</field>
 		<field name="arch" type="xml">
 			<form>
 				<header>

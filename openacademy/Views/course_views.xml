@@ -67,7 +67,7 @@
 						<field name="start_date"/>
 						<field name="duration"/>
 					</group>
-					<group name="info_group" string="Information"/>	
+					<group name="info_group" string="Information">	
 						<field name="instructor_id"/>
 						<field name="course_id"/>
 						<field name="seats"/>

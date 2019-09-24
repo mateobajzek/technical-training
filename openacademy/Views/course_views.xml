@@ -61,24 +61,24 @@
 				</header>
 				<sheet>
 					<h1>
-						<field name="name"/>
+						<field name="name" required="1"/>
 					</h1>
 					<group name="time_group" string="Timing">
 						<field name="start_date"/>
-						<field name="duration"/>
+						<field name="duration" attrs="{'indvisible':[('start_date','=',False)]]}"/>
 					</group>
 					<group name="info_group" string="Information">
 						<field name="instructor_id"/>
-						<field name="course_id"/>
-						<field name="seats"/>
-						<field name="taken_seats" widget="progressbar"/>
+						<field name="course_id" requierd="1"/>
+						<field name="seats"/> 
+						<field name="taken_seats" widget="progressbar" attrs="{'indvisible':[('seats','='0)]]}"/>/>
 					</group>
 					<notebook>
 						<page name="page_attendees" string="Attendees">
-							<field name="attendee_ids">
+							<field name="attendee_ids" domain="[('instructor','=',False)]">
 								<tree editable="bottom">
 									<field name="name"/>
-									<field name="instructor"/>
+									<field name="instructor" readonly="1"/>
 								</tree>
 							</field>
 						</page>

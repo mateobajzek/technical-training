@@ -65,7 +65,7 @@
 					</h1>
 					<group name="time_group" string="Timing">
 						<field name="start_date"/>
-						<field name="duration" attrs="{'indvisible':[('start_date','=',False)]]}"/>
+						<field name="duration" attrs="{'indvisible':[('start_date','=',False)]}"/>
 					</group>
 					<group name="info_group" string="Information">
 						<field name="instructor_id"/>

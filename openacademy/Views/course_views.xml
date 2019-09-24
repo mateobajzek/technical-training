@@ -51,6 +51,44 @@
 		</field>		
 	</record>
 
+<record id="session_form_view" model="ir.ui.view">
+		<field name="name">session.form.view</field>
+		<field name="model">openacademy.course</field>
+		<field name="arch" type="xml">
+			<form>
+				<header>
+					<field name="level" widget="statusbar"/>
+				</header>
+				<sheet>
+					<h1>
+						<field name="name"/>
+					</h1>
+					<group name="time_group" string="Timing">
+						<field name="start_date"/>
+						<field name="duration"?>
+					</group>
+					<group name="info_group" string="Information"/>	
+						<field name="instructor_id"/>
+						<field name="course_id"/>
+						<field name="seats"/>
+						<field name="taken_seats" widget="progressbar"/>
+					</group>	
+					<notebook>
+						<page name="page_attendees" string="Attendees">
+							<field name="attendee_ids"/>
+								<tree editable="bottom">
+									<field name="name"/>
+									<field name="instructor"/>
+								</tree>
+							</field>			
+						</page>			
+					</notebook>
+				</sheet>
+			</form>			
+		</field>	
+	</record>
+
+
 	<record id="action_course" model="ir.actions.act_window">
 		<field name="name">Courses</field>
 		<field name="res_model">openacademy.course</field>

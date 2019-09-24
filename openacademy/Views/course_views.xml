@@ -57,7 +57,7 @@
 		<field name="arch" type="xml">
 			<form>
 				<header>
-					<field name="level" widget="statusbar"/>
+					<field name="state" widget="statusbar"/>
 				</header>
 				<sheet>
 					<h1>
@@ -67,12 +67,12 @@
 						<field name="start_date"/>
 						<field name="duration"/>
 					</group>
-					<group name="info_group" string="Information">	
+					<group name="info_group" string="Information">
 						<field name="instructor_id"/>
 						<field name="course_id"/>
 						<field name="seats"/>
 						<field name="taken_seats" widget="progressbar"/>
-					</group>	
+					</group>
 					<notebook>
 						<page name="page_attendees" string="Attendees">
 							<field name="attendee_ids">
@@ -80,12 +80,12 @@
 									<field name="name"/>
 									<field name="instructor"/>
 								</tree>
-							</field>			
-						</page>			
+							</field>
+						</page>
 					</notebook>
 				</sheet>
-			</form>			
-		</field>	
+			</form>
+		</field>
 	</record>
 
 

@@ -2,13 +2,13 @@
 	<record id="action_course" model="ir.actions.act_window">
 		<field name="name">Courses</field>
 		<field name="res_model">openacademy.course</field>
-		<field name="view_mode">tre,form</field>
+		<field name="view_mode">tree,form</field>
 	</record>	
 
 	<record id="action_session" model="ir.actions.act_window">
 		<field name="name">Sessions</field>
 		<field name="res_model">openacademy.session</field>
-		<field name="view_mode">tre,form</field>
+		<field name="view_mode">tree,form</field>
 	</record>	
 
 	<menuitem id="top_menu_openacademy" name='openacademy' web_icon="openacademy,data/grumpy.jpeg"/>

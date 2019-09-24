@@ -1,0 +1,21 @@
+<odoo>
+	<record id="action_course" model="ir.actions.act_window">
+		<field name="name">Courses</field>
+		<field name="model">openacademy.course</field>
+		<field name="view_mode">tre,form</field>
+	</record>	
+
+	<record id="action_session" model="ir.actions.act_window">
+		<field name="name">Sessions</field>
+		<field name="model">openacademy.session</field>
+		<field name="view_mode">tre,form</field>
+	</record>	
+
+	<menuitem id="top_menu_openacademy" name='openacademy' web_icon="openacademy,data/grumpy.jpeg"/>
+
+	<menuitem id="course_menu_top" name="Courses" parent="openacademy.top_menu_openacademy"/>
+
+	<menuitem id="course_menu" name="Courses" parent="openacademy.course_menu_top" action="action_course"/>
+
+	<menuitem id="session_menu" name="Session" parent="openacademy.course_menu_top" action="action_session"/>
+</odoo>

@@ -11,19 +11,19 @@
 		</field>		
 	</record>
 
-	<record id="course_tree_view" model="ir.ui.view">
+	<record id="course_form_view" model="ir.ui.view">
 		<field name="name">course.form.view</field>
 		<field name="model">openacademy.course</field>
 		<field name="arch" type="xml">
 			<form>
 				<header>
-					<field name="level" widget="staatusbar"/>
+					<field name="level" widget="statusbar"/>
 				</header>
 				<sheet>
 					<h1>
 						<field name="name"/>
 					</h1>
-					<group name="responsible_group" string="responsible_group">
+					<group name="responsible_group" string="Responsible Group">
 						<field name="responsible_id"/>
 					</group>
 					<notebook>

@@ -71,7 +71,7 @@
 						<field name="instructor_id"/>
 						<field name="course_id" requierd="1"/>
 						<field name="seats"/> 
-						<field name="taken_seats" widget="progressbar" attrs="{'indvisible':[('seats','='0)]}"/>/>
+						<field name="taken_seats" widget="progressbar" attrs="{'indvisible':[('Seats,'=','0')]}"/>
 					</group>
 					<notebook>
 						<page name="page_attendees" string="Attendees">

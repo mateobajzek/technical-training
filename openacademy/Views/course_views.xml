@@ -39,6 +39,18 @@
 		</field>	
 	</record>
 
+		<record id="session_tree_view" model="ir.ui.view">
+		<field name="name">session.tree.view</field>
+		<field name="model">openacademy.session</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="seats"/>
+				<field name="taken_seats" widget="progressbar"/> 
+				<field name="attendee_ids"/>
+			</tree>
+		</field>		
+	</record>
+
 	<record id="action_course" model="ir.actions.act_window">
 		<field name="name">Courses</field>
 		<field name="res_model">openacademy.course</field>
